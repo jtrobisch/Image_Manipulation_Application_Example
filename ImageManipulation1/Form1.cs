@@ -90,11 +90,10 @@ namespace ImageManipulation1
                     }
 
                     StreamWriter streamWriter = new StreamWriter(sfd.FileName, false);
-                    resultBitmap.Save(streamWriter.BaseStream, imgFormat);
+                    Bitmap Finalproduct = (Bitmap) pictureBox2.Image;
+                    Finalproduct.Save(streamWriter.BaseStream, imgFormat);
                     streamWriter.Flush();
                     streamWriter.Close();
-
-                    resultBitmap = null;
                 }
             }
         }
